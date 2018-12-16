@@ -50,7 +50,7 @@ class AddClient extends Component {
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label htmlFor="First Name" />
+                <label htmlFor="First Name">First Name</label>
                 <input
                   type="text"
                   className="form-control"
@@ -62,7 +62,7 @@ class AddClient extends Component {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="Last Name" />
+                <label htmlFor="Last Name">Last Name</label>
                 <input
                   type="text"
                   className="form-control"
@@ -74,7 +74,7 @@ class AddClient extends Component {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email" />
+                <label htmlFor="email">Email</label>
                 <input
                   type="text"
                   className="form-control"
@@ -85,7 +85,7 @@ class AddClient extends Component {
               </div>
 
               <div className="form-group">
-                <label htmlFor="phone" />
+                <label htmlFor="phone">Phone</label>
                 <input
                   type="text"
                   className="form-control"
@@ -97,7 +97,7 @@ class AddClient extends Component {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="balance" />
+                <label htmlFor="balance">Balance</label>
                 <input
                   type="text"
                   className="form-control"
@@ -119,5 +119,9 @@ class AddClient extends Component {
     );
   }
 }
+
+AddClient.propTypes = {
+  firestore: PropTypes.object.isRequired
+};
 
 export default firestoreConnect()(AddClient);
